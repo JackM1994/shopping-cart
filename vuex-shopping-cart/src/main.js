@@ -1,8 +1,7 @@
-import Vue from 'vue'
+import { createApp } from 'vue'
 import App from './App.vue'
+import router from './../node_modules/router'
+import store from './store'
+import './../node_modules/bulma/css/bulma.css'
 
-Vue.config.productionTip = false
-
-new Vue({
-  render: h => h(App),
-}).$mount('#app')
+createApp(App).use(store).use(router).mount('#app')
